@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    image: backend:1.0
+    ports:
+      - 5001:5000
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    image: frontend:1.0
+    ports:
+      - 80:80
